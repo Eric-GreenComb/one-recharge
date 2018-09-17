@@ -1,0 +1,32 @@
+
+###health
+GET http://127.0.0.1:3000/health
+Content-Type: application/json
+
+{
+}
+
+###CreateRechargeRate
+POST http://127.0.0.1:3000/api/v1/rate/create
+Content-Type: application/json
+
+{
+    "token":"1000",
+    "chip":"3000"
+}
+
+###RechargeRateInfo
+GET http://127.0.0.1:3000/api/v1/rate
+Content-Type: application/json
+
+{
+}
+
+###ListRechargeRate
+GET http://127.0.0.1:3000/api/v1/rate/list/0/10
+Content-Type: application/json
+
+{
+}
+
+
