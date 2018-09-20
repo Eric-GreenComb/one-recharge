@@ -48,6 +48,7 @@ func main() {
 		r1.GET("/rate", handler.RechargeRateInfo)
 		r1.GET("/rate/list/:page/:limit", handler.ListRechargeRate)
 
+		r1.POST("/recharge", handler.Recharge)
 	}
 
 	for _, _port := range config.Server.Port {

@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -79,4 +80,15 @@ func ListRechargeRate(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, _rates)
+}
+
+// Recharge Recharge
+func Recharge(c *gin.Context) {
+
+	var _formParams bean.FormParams
+	c.BindJSON(&_formParams)
+
+	fmt.Println(_formParams)
+
+	c.JSON(http.StatusOK, gin.H{"errcode": 0, "msg": _formParams})
 }

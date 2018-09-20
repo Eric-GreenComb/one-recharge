@@ -29,4 +29,15 @@ Content-Type: application/json
 {
 }
 
+###recharge
+POST http://127.0.0.1:3000/api/v1/recharge
+Content-Type: application/json
+
+{
+    "nums":"20000000000000000000",
+    "address":"0xfcc931cf38ab8f37278e47e7d5b6e4468f28ed8d",
+    "create_time":1537433195,
+    "isauth":"Sinoc"
+}
+
 
