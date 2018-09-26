@@ -4,13 +4,19 @@
 #
 ###############################################################################
 server:
-  port: 3000
+  port: 9990,9991,9992,9993
   mode: debug  # debug;release
   gorm:
     LogMode: false # db log
   view:
     limit: 10 
   
+ethereum:
+  chainID: 1
+  host: https://mainnet.infura.io/1UoO4I
+  address: "0x762009cd5dcabb5a125008d70f5efdbdff2aa782"
+  passphrase: "613131313131"  # rand
+
 ###############################################################################
 #
 #    MariaDb Config section
@@ -31,4 +37,5 @@ database:
   # 空闲时最大的连接数
   maxIdleConns: 20
   # 最大的连接数
-  maxOpenConns: 20
+  maxOpenConns: 20  
+

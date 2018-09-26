@@ -3,8 +3,8 @@ package persist
 import (
 	"github.com/jinzhu/gorm"
 
-	"github.com/Eric-GreenComb/one-recharge/bean"
-	"github.com/Eric-GreenComb/one-recharge/config"
+	"github.com/Eric-GreenComb/one-pushinfo/bean"
+	"github.com/Eric-GreenComb/one-pushinfo/config"
 )
 
 // ConnectDb connect Db
@@ -35,9 +35,9 @@ func InitDatabase() {
 		panic(err)
 	}
 
-	if !db.HasTable(&bean.RechargeRate{}) {
-		db.CreateTable(&bean.RechargeRate{})
-		db.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&bean.RechargeRate{})
+	if !db.HasTable(&bean.Order{}) {
+		db.CreateTable(&bean.Order{})
+		db.Set("gorm:table_options", "ENGINE=InnoDB").CreateTable(&bean.Order{})
 	}
 
 	return

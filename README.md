@@ -1,3 +1,2 @@
-# one-recharge
-
-one recharge
+# one-pushinfo
+push info 2 eth

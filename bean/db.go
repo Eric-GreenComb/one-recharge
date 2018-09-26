@@ -4,19 +4,16 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-// Recharge 充值记录
-type Recharge struct {
+// Order 下单
+type Order struct {
 	gorm.Model
-	TxID        string `gorm:"not null" form:"txid" json:"txid"`       // 用户交易txid
-	Address     string `gorm:"not null" form:"address" json:"address"` // 用户账户
-	TokenAmount int64  `gorm:"not null" form:"token" json:"token"`     // 充值Token数量
-	ChipAmount  string `gorm:"not null" form:"chip" json:"chip"`       // 兑换的筹码
-	Rate        string `gorm:"not null" form:"rate" json:"rate"`       // 筹码兑换比例:1000:100
-}
-
-// RechargeRate token-筹码兑换比例
-type RechargeRate struct {
-	gorm.Model
-	Token int64 `gorm:"not null" form:"token" json:"token"` // token数量
-	Chip  int64 `gorm:"not null" form:"chip" json:"chip"`   // 筹码数量
+	OrderCode string `form:"ordercode" json:"ordercode"` // 订单编码
+	Amount    string `form:"amount" json:"amount"`       // 订单金额
+	GoodsID   string `form:"goodsid" json:"goodsid"`     // 货物id
+	GoodName  string `form:"goodname" json:"goodname"`   // Iphone(第三期）
+	BuyTime   string `form:"buytime" json:"buytime"`     // 购买时间
+	UserName  string `form:"username" json:"username"`   // 购买用户名称
+	Type      int8   `form:"type" json:"type"`           // 类型  0为下单，1为抽奖
+	Desc      string `form:"desc" json:"desc"`           // 用户购买的编码
+	TxID      string `form:"txid" json:"txid"`           // 入账txid
 }

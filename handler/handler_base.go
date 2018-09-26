@@ -8,7 +8,7 @@ import (
 
 // Index Index
 func Index(c *gin.Context) {
-	c.String(http.StatusOK, "eth-server index")
+	c.String(http.StatusOK, "one-pushinfo index")
 }
 
 // Health Health

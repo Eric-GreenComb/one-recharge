@@ -1,43 +1,39 @@
 
 ###health
-GET http://127.0.0.1:3000/health
+GET http://123.206.29.15:9990/health
 Content-Type: application/json
 
 {
 }
 
-###CreateRechargeRate
-POST http://127.0.0.1:3000/api/v1/rate/create
+###WriteBlock /block/write 参数以json形式提交
+POST http://localhost:9990/block/write
 Content-Type: application/json
 
 {
-    "token":"1000",
-    "chip":"3000"
+    "ordercode":"order0003",
+    "amount":"3000",
+    "goodsid":"cat0003",
+    "goodname":"pat0003",
+    "buytime":"20180926",
+    "username":"one-buy",
+    "desc":"长生生物科技股份有限公司疫苗造假事件"
 }
 
-###RechargeRateInfo
-GET http://127.0.0.1:3000/api/v1/rate
+###ReadBlock /block/read/:orderid
+GET http://123.206.29.15:9990/block/read/order0006
 Content-Type: application/json
 
 {
 }
 
-###ListRechargeRate
-GET http://127.0.0.1:3000/api/v1/rate/list/0/10
+###PutWinerTxID /block/winer 参数以json提交
+POST http://localhost:9990/block/winer
 Content-Type: application/json
 
 {
+    "wintime":"20180910",
+    "goodsid":"cat0001",
+    "goodname":"pat0001",
+    "desc":"一轮结束后记录，结果返回txid"
 }
-
-###recharge
-POST http://127.0.0.1:3000/api/v1/recharge
-Content-Type: application/json
-
-{
-    "nums":"20000000000000000000",
-    "address":"0xfcc931cf38ab8f37278e47e7d5b6e4468f28ed8d",
-    "create_time":1537433195,
-    "isauth":"Sinoc"
-}
-
-

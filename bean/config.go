@@ -8,6 +8,14 @@ type ServerConfig struct {
 	ViewLimit   int
 }
 
+// EthereumConfig EthereumConfig
+type EthereumConfig struct {
+	ChainID    int64
+	Host       string
+	Address    string
+	Passphrase string
+}
+
 // DBConfig DBConfig Struct
 type DBConfig struct {
 	Dialect      string

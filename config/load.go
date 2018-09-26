@@ -6,8 +6,14 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/Eric-GreenComb/one-recharge/bean"
+	"github.com/Eric-GreenComb/one-pushinfo/bean"
 )
+
+// Ethereum Ethereum Config
+var Ethereum bean.EthereumConfig
+
+// PendingNonce PendingNonce
+var PendingNonce uint64
 
 // Server Server Config
 var Server bean.ServerConfig
@@ -32,6 +38,11 @@ func initConfig() {
 	Server.Mode = viper.GetString("server.mode")
 	Server.GormLogMode = viper.GetString("server.gorm.LogMode")
 	Server.ViewLimit = viper.GetInt("server.view.limit")
+
+	Ethereum.ChainID = viper.GetInt64("ethereum.chainID")
+	Ethereum.Host = viper.GetString("ethereum.host")
+	Ethereum.Address = viper.GetString("ethereum.address")
+	Ethereum.Passphrase = viper.GetString("ethereum.passphrase")
 
 	MariaDB.Dialect = viper.GetString("database.dialect")
 	MariaDB.Database = viper.GetString("database.database")
