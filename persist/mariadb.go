@@ -3,8 +3,8 @@ package persist
 import (
 	"github.com/jinzhu/gorm"
 
-	"github.com/Eric-GreenComb/one-pushinfo/bean"
-	"github.com/Eric-GreenComb/one-pushinfo/config"
+	"github.com/Eric-GreenComb/one-recharge/bean"
+	"github.com/Eric-GreenComb/one-recharge/config"
 )
 
 // ConnectDb connect Db

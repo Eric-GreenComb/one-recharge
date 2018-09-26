@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/Eric-GreenComb/one-pushinfo/bean"
+	"github.com/Eric-GreenComb/one-recharge/bean"
 )
 
 // Ethereum Ethereum Config

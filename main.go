@@ -10,10 +10,10 @@ import (
 	"github.com/golang/sync/errgroup"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
-	"github.com/Eric-GreenComb/one-pushinfo/config"
-	"github.com/Eric-GreenComb/one-pushinfo/ethereum"
-	"github.com/Eric-GreenComb/one-pushinfo/handler"
-	"github.com/Eric-GreenComb/one-pushinfo/persist"
+	"github.com/Eric-GreenComb/one-recharge/config"
+	"github.com/Eric-GreenComb/one-recharge/ethereum"
+	"github.com/Eric-GreenComb/one-recharge/handler"
+	"github.com/Eric-GreenComb/one-recharge/persist"
 )
 
 var (

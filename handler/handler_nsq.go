@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Eric-GreenComb/one-pushinfo/bean"
-	"github.com/Eric-GreenComb/one-pushinfo/nsq"
+	"github.com/Eric-GreenComb/one-recharge/bean"
+	"github.com/Eric-GreenComb/one-recharge/nsq"
 )
 
 // WriteNsq WriteNsq

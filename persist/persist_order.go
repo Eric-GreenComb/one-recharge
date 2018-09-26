@@ -1,7 +1,7 @@
 package persist
 
 import (
-	"github.com/Eric-GreenComb/one-pushinfo/bean"
+	"github.com/Eric-GreenComb/one-recharge/bean"
 )
 
 // CreateOrder CreateOrder Persist

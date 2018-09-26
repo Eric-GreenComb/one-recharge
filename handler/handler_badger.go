@@ -7,8 +7,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/Eric-GreenComb/one-pushinfo/badger"
-	"github.com/Eric-GreenComb/one-pushinfo/bean"
+	"github.com/Eric-GreenComb/one-recharge/badger"
+	"github.com/Eric-GreenComb/one-recharge/bean"
 )
 
 // SetBadgerKey SetBadgerKey

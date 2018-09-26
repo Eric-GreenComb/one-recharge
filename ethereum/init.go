@@ -8,7 +8,7 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/golang/glog"
 
-	"github.com/Eric-GreenComb/one-pushinfo/config"
+	"github.com/Eric-GreenComb/one-recharge/config"
 )
 
 // Clients global client connection
