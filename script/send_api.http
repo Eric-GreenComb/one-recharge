@@ -1,27 +1,6 @@
 
 ###health
-GET http://123.206.29.15:9990/health
-Content-Type: application/json
-
-{
-}
-
-###WriteBlock /block/write 参数以json形式提交
-POST http://localhost:9990/block/write
-Content-Type: application/json
-
-{
-    "ordercode":"order0003",
-    "amount":"3000",
-    "goodsid":"cat0003",
-    "goodname":"pat0003",
-    "buytime":"20180926",
-    "username":"one-buy",
-    "desc":"长生生物科技股份有限公司疫苗造假事件"
-}
-
-###ReadBlock /block/read/:orderid
-GET http://123.206.29.15:9990/block/read/order0006
+GET http://localhost:9990/health
 Content-Type: application/json
 
 {
@@ -32,7 +11,18 @@ POST http://localhost:9990/block/winer
 Content-Type: application/json
 
 {
-    "wintime":"20180910",
+    "wintime":"20180928",
+    "goodsid":"cat0001",
+    "goodname":"pat0001",
+    "desc":"一轮结束后记录，结果返回txid"
+}
+
+###PutWinerTxID /block/winer 参数以json提交
+POST http://123.206.29.15:9990/block/winer
+Content-Type: application/json
+
+{
+    "wintime":"20180928",
     "goodsid":"cat0001",
     "goodname":"pat0001",
     "desc":"一轮结束后记录，结果返回txid"

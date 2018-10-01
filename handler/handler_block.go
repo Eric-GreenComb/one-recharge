@@ -159,7 +159,7 @@ func SendEthereumCoin(desc string) (string, error) {
 		return txID.String(), err
 	}
 
-	_amountBigInt := ethereum.StringToWei("0.01", 18)
+	_amountBigInt := ethereum.StringToWei("0.001", 18)
 	fmt.Println(_amountBigInt)
 	_chainIDBigInt := big.NewInt(config.Ethereum.ChainID)
 

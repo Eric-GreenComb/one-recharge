@@ -1,2 +1,2 @@
 #!/bin/bash
-./recharge
+./pushinfo
