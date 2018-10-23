@@ -85,7 +85,7 @@ func suggestGasPrice() {
 	}
 
 	// Average = gWei ×　１０, if gas.Average < 1, will be 0
-	gasPrice := big.NewInt(int64(gas.Average) * gWei / 10)
+	gasPrice := big.NewInt(int64(gas.Fastest) * gWei / 10)
 
 	// if gasPrice is broken, will set the last value.
 	if gasPrice.Cmp(big.NewInt(0)) < 0 {

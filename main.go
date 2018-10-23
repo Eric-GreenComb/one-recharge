@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/facebookgo/grace/gracehttp"
 	"github.com/gin-gonic/gin"
 	"github.com/golang/sync/errgroup"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -54,24 +55,24 @@ func main() {
 	// api
 	r1 := router.Group("/block")
 	{
-		r1.POST("/write", handler.WriteBlock)
-		r1.GET("/read/:orderid", handler.ReadBlock)
+		// r1.POST("/write", handler.WriteBlock)
+		// r1.GET("/read/:orderid", handler.ReadBlock)
 		r1.POST("/winer", handler.PutWinerTxID)
-		r1.GET("/orders/:catid/:patchid", handler.GetAllOrders)
+		// r1.GET("/orders/:catid/:patchid", handler.GetAllOrders)
 	}
 
-	r2 := router.Group("/ethereum")
-	{
-		r2.GET("/nonce", handler.PendingNonce)
-		r2.POST("/send", handler.SendEthCoin)
-		r2.GET("/balance/:addr", handler.GetBalance)
-	}
+	// r2 := router.Group("/ethereum")
+	// {
+	// 	r2.GET("/nonce", handler.PendingNonce)
+	// 	r2.POST("/send", handler.SendEthCoin)
+	// 	r2.GET("/balance/:addr", handler.GetBalance)
+	// }
 
-	r100 := router.Group("/badger")
-	{
-		r100.POST("/set", handler.SetBadgerKey)
-		r100.GET("/get/:key", handler.GetBadgerKey)
-	}
+	// r100 := router.Group("/badger")
+	// {
+	// 	r100.POST("/set", handler.SetBadgerKey)
+	// 	r100.GET("/get/:key", handler.GetBadgerKey)
+	// }
 
 	for _, _port := range config.Server.Port {
 		server := &http.Server{
@@ -82,7 +83,7 @@ func main() {
 		}
 
 		g.Go(func() error {
-			return server.ListenAndServe()
+			return gracehttp.Serve(server)
 		})
 	}
 
