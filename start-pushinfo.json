@@ -1,0 +1,15 @@
+{
+    "apps": [{
+        "name": "pushinfo-eth-0",
+        "cwd": "./",
+        "script": "start-pushinfo.sh",
+        "exec_interpreter": "bash",
+        "min_uptime": "60s",
+        "max_restarts": 30,
+        "exec_mode": "fork",
+        "error_file": "./tmp/pushinfo-eth-0-err.log",
+        "out_file": "./tmp/pushinfo-eth-0-out.log",
+        "pid_file": "./tmp/pushinfo-eth-0_linked.pid",
+        "watch": false
+    }]
+}

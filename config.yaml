@@ -4,7 +4,7 @@
 #
 ###############################################################################
 server:
-  port: 9990,9991,9992,9993
+  port: "9900"
   mode: debug  # debug;release
   gorm:
     LogMode: false # db log
@@ -14,8 +14,8 @@ server:
 ethereum:
   chainID: 1
   host: https://mainnet.infura.io/1UoO4I
-  address: "0x8d7d7e21c59ad36bbd5bf63fbfc262f8c2986b13"
-  passphrase: "416131313131"  # rand
+  address: "0x0000000000000000000000"
+  passphrase: "0000000"  # rand
 
 ###############################################################################
 #
