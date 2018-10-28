@@ -9,6 +9,12 @@
 			"revisionTime": "2017-07-02T08:40:17Z"
 		},
 		{
+			"checksumSHA1": "iOeSiuTIdW78dmJDjvRbSg0P0Fc=",
+			"path": "github.com/Eric-GreenComb/contrib/rand",
+			"revision": "6da4338a75d550e454bfaec2001884fed8a859cc",
+			"revisionTime": "2018-10-26T09:54:06Z"
+		},
+		{
 			"checksumSHA1": "LFWkRTcviL/PwMLzMYNlunJlCLY=",
 			"path": "github.com/Eric-GreenComb/go-bip39",
 			"revision": "2af0a847066a4f2669040ccd44a79c8eca10806a",

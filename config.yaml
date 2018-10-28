@@ -14,8 +14,8 @@ server:
 ethereum:
   chainID: 1
   host: https://mainnet.infura.io/1UoO4I
-  address: "0x0000000000000000000000"
-  passphrase: "0000000"  # rand
+  address: "0x0000000000"
+  passphrase: "00000"  # rand
 
 ###############################################################################
 #
